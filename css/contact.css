@@ -15,10 +15,10 @@
 }
 
 .contact__description {
-    max-width: 46rem;
     margin-top: 2.5rem;
     font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem);
     line-height: 1.7;
+    text-align: justify;
 }
 
 .contact__links {

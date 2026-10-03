@@ -63,6 +63,7 @@ p {
     padding: 1.25rem 2rem;
     position: sticky;
     top: 0;
+    z-index: 10;                      /* por encima de las imágenes posicionadas de las cards */
     background: var(--color-header-bg);
     backdrop-filter: blur(10px);
 }

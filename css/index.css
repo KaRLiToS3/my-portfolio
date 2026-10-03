@@ -37,6 +37,7 @@ h2 {
     font-size: clamp(1rem, 0.75rem + 1vw, 1.25rem);
     line-height: 1.5;
     color: var(--color-muted);
+    text-align: justify;
 }
 
 .intro__image img {
@@ -109,9 +110,32 @@ h2 {
 }
 
 /* My-Story */
+.my-story__content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1.5rem;
+}
 .my-story__description {
     font-size: 1.1rem;
     line-height: 1.8;
+    align-self: center;
+    text-align: justify;
+}
+
+.my-story__image {
+    border-radius: 2rem;
+    align-self: center;
+}
+
+@media (max-width: 768px) {
+    .my-story__content {
+        grid-template-columns: 1fr;
+    }
+    .my-story__image {
+        width: 100%;
+        aspect-ratio: 1.5;
+        object-fit: cover;
+    }
 }
 
 /* Milestones */
