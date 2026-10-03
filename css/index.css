@@ -38,6 +38,7 @@ h2 {
     line-height: 1.5;
     color: var(--color-muted);
     text-align: justify;
+    hyphens: auto;                    /* parte palabras con guion para evitar huecos grandes al justificar */
 }
 
 .intro__image img {
@@ -45,6 +46,19 @@ h2 {
     aspect-ratio: 0.8;
     object-fit: cover;                /* recorta en vez de deformar */
     border-radius: var(--radius);
+}
+
+@media (max-width: 768px) {
+    .intro {
+        grid-template-columns: 1fr;   /* en móvil todo en una columna */
+    }
+    .intro__image {
+        max-width: 24rem;             /* la foto ya es 4:5 (aspect-ratio 0.8), así no ocupa media pantalla en tablet */
+        justify-self: center;             /* centra la foto en la columna */
+    }
+    .intro__actions {
+        justify-content: center;      /* centra los botones en la columna */
+    }
 }
 
 /* Facts */
@@ -120,6 +134,7 @@ h2 {
     line-height: 1.8;
     align-self: center;
     text-align: justify;
+    hyphens: auto;
 }
 
 .my-story__image {
@@ -145,6 +160,14 @@ h2 {
     gap: 1.5rem;
     align-items: baseline;
     padding: 1rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .milestones__item {
+        grid-template-columns: 4rem 1fr;   /* en móvil el año ocupa menos y deja sitio al texto */
+        gap: 1rem;
+        padding-inline: 0;
+    }
 }
 
 .milestones__item strong::after {
