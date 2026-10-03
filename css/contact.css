@@ -84,6 +84,7 @@
 }
 
 .message__field--full,
+.message__check,
 .message__submit {
     grid-column: 1 / -1;              /* ocupa las dos columnas */
 }
@@ -118,6 +119,48 @@
 
 textarea.message__input {
     resize: vertical;                 /* solo se puede agrandar hacia abajo */
+}
+
+select.message__input {
+    cursor: pointer;
+}
+
+/* Radio buttons y checkbox */
+.message__choices {
+    min-width: 0;                     /* quita los estilos que el navegador pone por defecto al fieldset */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.message__choices legend {
+    padding: 0;
+    margin-bottom: 0.5rem;
+}
+
+.message__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    padding-block: 0.875rem;          /* misma altura que los inputs de al lado */
+}
+
+.message__option,
+.message__check {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    color: var(--color-muted);
+    cursor: pointer;
+}
+
+.message__option input,
+.message__check input {
+    flex-shrink: 0;                   /* la casilla no se aplasta si el texto ocupa dos líneas */
+    width: 1.15rem;
+    height: 1.15rem;
+    accent-color: var(--color-text);  /* colorea la marca con el gris claro del tema */
+    cursor: pointer;
 }
 
 .message__submit {

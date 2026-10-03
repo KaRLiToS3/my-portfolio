@@ -76,6 +76,29 @@
                         <input class="message__input" id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
                     </div>
 
+                    <div class="message__field">
+                        <label class="message__label" for="area">Area</label>
+                        <select class="message__input" id="area" name="area">
+                            <option value="" selected disabled>Choose an area</option>
+                            <option value="space">Space R&amp;D</option>
+                            <option value="electronics">Electronics &amp; PCB</option>
+                            <option value="embedded">Embedded systems</option>
+                            <option value="cybersecurity">Cybersecurity</option>
+                            <option value="software">Software</option>
+                            <option value="other">Something else</option>
+                        </select>
+                    </div>
+
+                    <!-- fieldset + legend agrupa los radio buttons bajo un mismo título (lo leen los lectores de pantalla) -->
+                    <fieldset class="message__choices">
+                        <legend class="message__label">Type of opportunity</legend>
+                        <div class="message__options">
+                            <label class="message__option"><input type="radio" name="type" value="full-time"> Full-time</label>
+                            <label class="message__option"><input type="radio" name="type" value="internship"> Internship</label>
+                            <label class="message__option"><input type="radio" name="type" value="project"> Project</label>
+                        </div>
+                    </fieldset>
+
                     <div class="message__field message__field--full">
                         <label class="message__label" for="subject">Subject</label>
                         <input class="message__input" id="subject" name="subject" type="text" placeholder="R&amp;D role at…">
@@ -85,6 +108,11 @@
                         <label class="message__label" for="message">Message</label>
                         <textarea class="message__input" id="message" name="message" rows="6" placeholder="Tell me about the role or the project." required></textarea>
                     </div>
+
+                    <label class="message__check">
+                        <input type="checkbox" name="consent" required>
+                        I agree that my details are only used to reply to this message.
+                    </label>
 
                     <button class="btn btn--solid message__submit" type="submit">Send message <span aria-hidden="true">→</span></button>
                 </form>
