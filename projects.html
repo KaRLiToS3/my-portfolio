@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Projects by Carlos Peña Edo — embedded systems, IoT and software.">
+        <meta name="theme-color" content="#0a0a0a">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif&display=swap">
+
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/projects.css">
+
+        <title>Projects · Carlos Peña Edo</title>
+    </head>
+    <body>
+        <header class="header">
+            <a class="header__logo" href="index.html">
+                <span class="header__avatar" aria-hidden="true">C</span>
+                Carlos
+            </a>
+
+            <nav class="header__nav" aria-label="Main">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="index.html">About</a></li>
+                    <li><a class="nav__link" href="experience.html">Experience</a></li>
+                    <li><a class="nav__link" href="education.html">Education</a></li>
+                    <li><a class="nav__link is-active" href="projects.html" aria-current="page">Projects</a></li>
+                    <li><a class="nav__link" href="skills.html">Skills</a></li>
+                    <li><a class="nav__link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1 class="page-title">Projects</h1>
+
+            <ul class="projects">
+                <li class="card project">
+                    <!-- Cuando tengas la foto, cambia el texto por <img src="img/..." alt="..."> -->
+                    <div class="project__media">photo of the board</div>
+                    <div class="project__body">
+                        <p class="project__category">Embedded · IoT</p>
+                        <h2 class="project__title">[Smart home sensor]</h2>
+                        <p class="project__description">[Battery-powered sensor node that sends temperature data over Wi-Fi to a dashboard.]</p>
+                        <ul class="project__stack" aria-label="Tech stack">
+                            <li>ESP32</li>
+                            <li>C</li>
+                            <li>MQTT</li>
+                            <li>KiCad</li>
+                        </ul>
+                        <a class="project__link" href="#">GitHub / case study <span aria-hidden="true">→</span></a>
+                    </div>
+                </li>
+
+                <li class="card project">
+                    <div class="project__media">app screenshot</div>
+                    <div class="project__body">
+                        <p class="project__category">Software</p>
+                        <h2 class="project__title">[Mobile / web app]</h2>
+                        <p class="project__description">[App that controls the device and shows live data. Describe your role and the result.]</p>
+                        <ul class="project__stack" aria-label="Tech stack">
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>REST</li>
+                        </ul>
+                        <a class="project__link" href="#">GitHub / case study <span aria-hidden="true">→</span></a>
+                    </div>
+                </li>
+
+                <li class="card project">
+                    <div class="project__media">project photo or diagram</div>
+                    <div class="project__body">
+                        <p class="project__category">Final project</p>
+                        <h2 class="project__title">[Thesis project]</h2>
+                        <p class="project__description">[The problem you solved, how, and what you measured at the end.]</p>
+                        <ul class="project__stack" aria-label="Tech stack">
+                            <li>Python</li>
+                            <li>MATLAB</li>
+                            <li>STM32</li>
+                        </ul>
+                        <a class="project__link" href="#">GitHub / case study <span aria-hidden="true">→</span></a>
+                    </div>
+                </li>
+            </ul>
+
+            <nav class="pager" aria-label="Pages">
+                <a class="pager__link" href="education.html"><span aria-hidden="true">←</span> Education</a>
+                <a class="pager__link pager__link--next" href="skills.html">Skills <span aria-hidden="true">→</span></a>
+            </nav>
+        </main>
+
+        <footer class="footer">
+            <p>Carlos Peña Edo · Electronics &amp; Software Engineer</p>
+        </footer>
+    </body>
+</html>

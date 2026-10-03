@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Work experience of Carlos Peña Edo — embedded firmware, testing and software engineering.">
+        <meta name="theme-color" content="#0a0a0a">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif&display=swap">
+
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/experience.css">
+
+        <title>Experience · Carlos Peña Edo</title>
+    </head>
+    <body>
+        <header class="header">
+            <a class="header__logo" href="index.html">
+                <span class="header__avatar" aria-hidden="true">C</span>
+                Carlos
+            </a>
+
+            <nav class="header__nav" aria-label="Main">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="index.html">About</a></li>
+                    <li><a class="nav__link is-active" href="experience.html" aria-current="page">Experience</a></li>
+                    <li><a class="nav__link" href="education.html">Education</a></li>
+                    <li><a class="nav__link" href="projects.html">Projects</a></li>
+                    <li><a class="nav__link" href="skills.html">Skills</a></li>
+                    <li><a class="nav__link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1 class="page-title">Work experience</h1>
+
+            <ol class="jobs">
+                <li class="card job">
+                    <div class="job__logo"><img src="img/satlantis.png" alt=""></div>
+
+                    <div class="job__body">
+                        <p class="job__period">[2024 — Now]</p>
+                        <h2 class="job__title">[Embedded Software Engineer]</h2>
+                        <p class="job__place">Satlantis · [City]</p>
+                        <ul class="job__tasks">
+                            <li>Developed firmware for [device] in C on [STM32 / ESP32], cutting power use by [X]%.</li>
+                            <li>Wrote automated tests for [system], reducing bugs reaching production.</li>
+                            <li>Worked with the hardware team on board bring-up and debugging.</li>
+                        </ul>
+                        <ul class="tag-list job__tags" aria-label="Technologies">
+                            <li class="tag">C</li>
+                            <li class="tag">FreeRTOS</li>
+                            <li class="tag">Git</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="card job">
+                    <div class="job__logo"><img src="img/UDMT.png" alt=""></div>
+
+                    <div class="job__body">
+                        <p class="job__period">[2023]</p>
+                        <h2 class="job__title">[Software Engineering Intern]</h2>
+                        <p class="job__place">Universidad de Deusto MotoTeam · [City]</p>
+                        <ul class="job__tasks">
+                            <li>Built [feature] for [web / mobile app] used by [N] users.</li>
+                            <li>[One more result, with a number if possible.]</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+
+            <nav class="pager" aria-label="Pages">
+                <a class="pager__link" href="index.html"><span aria-hidden="true">←</span> About</a>
+                <a class="pager__link pager__link--next" href="education.html">Education <span aria-hidden="true">→</span></a>
+            </nav>
+        </main>
+
+        <footer class="footer">
+            <p>Carlos Peña Edo · Electronics &amp; Software Engineer</p>
+        </footer>
+    </body>
+</html>

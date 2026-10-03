@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Get in touch with Carlos Peña Edo — email, LinkedIn, GitHub and CV.">
+        <meta name="theme-color" content="#0a0a0a">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif&display=swap">
+
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/contact.css">
+
+        <title>Contact · Carlos Peña Edo</title>
+    </head>
+    <body>
+        <header class="header">
+            <a class="header__logo" href="index.html">
+                <span class="header__avatar" aria-hidden="true">C</span>
+                Carlos
+            </a>
+
+            <nav class="header__nav" aria-label="Main">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="index.html">About</a></li>
+                    <li><a class="nav__link" href="experience.html">Experience</a></li>
+                    <li><a class="nav__link" href="education.html">Education</a></li>
+                    <li><a class="nav__link" href="projects.html">Projects</a></li>
+                    <li><a class="nav__link" href="skills.html">Skills</a></li>
+                    <li><a class="nav__link is-active" href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="card contact">
+                <h1 class="contact__title">Let's build something together.</h1>
+                <p class="contact__description">I'm looking for [junior embedded / software] roles in [city or remote]. Email is the quickest way to reach me.</p>
+
+                <ul class="contact__links">
+                    <li>
+                        <a class="contact__link" href="mailto:carlos@email.com">
+                            <span class="contact__link-label">Email</span>
+                            <span class="contact__link-value">[carlos@email.com]</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact__link" href="#">
+                            <span class="contact__link-label">LinkedIn</span>
+                            <span class="contact__link-value">/in/[carlos]</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact__link" href="#">
+                            <span class="contact__link-label">GitHub</span>
+                            <span class="contact__link-value">github.com/[carlos]</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact__link" href="#">
+                            <span class="contact__link-label">CV</span>
+                            <span class="contact__link-value">Download PDF</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="card message" aria-labelledby="message-title">
+                <h2 class="message__title" id="message-title">Or send me a message</h2>
+
+                <!-- Solo es visual: para que envíe de verdad, action tiene que apuntar a un servicio (p. ej. Formspree) -->
+                <form class="message__form" action="#">
+                    <div class="message__field">
+                        <label class="message__label" for="name">Name</label>
+                        <input class="message__input" id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+                    </div>
+
+                    <div class="message__field">
+                        <label class="message__label" for="email">Email</label>
+                        <input class="message__input" id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+                    </div>
+
+                    <div class="message__field message__field--full">
+                        <label class="message__label" for="subject">Subject</label>
+                        <input class="message__input" id="subject" name="subject" type="text" placeholder="Junior embedded role at…">
+                    </div>
+
+                    <div class="message__field message__field--full">
+                        <label class="message__label" for="message">Message</label>
+                        <textarea class="message__input" id="message" name="message" rows="6" placeholder="Tell me about the role or the project." required></textarea>
+                    </div>
+
+                    <button class="btn btn--solid message__submit" type="submit">Send message <span aria-hidden="true">→</span></button>
+                </form>
+            </section>
+
+            <nav class="pager" aria-label="Pages">
+                <a class="pager__link" href="skills.html"><span aria-hidden="true">←</span> Skills</a>
+            </nav>
+        </main>
+
+        <footer class="footer">
+            <p>Carlos Peña Edo · Electronics &amp; Software Engineer</p>
+        </footer>
+    </body>
+</html>

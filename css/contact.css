@@ -1,0 +1,132 @@
+/* Común */
+.contact,
+.message {
+    padding: clamp(1.75rem, 5vw, 4rem);
+}
+
+/* Contact */
+.contact {
+    margin-top: 4rem;
+}
+
+.contact__title {
+    font-size: clamp(2.75rem, 1.5rem + 4vw, 5.5rem);
+    line-height: 1.1;
+}
+
+.contact__description {
+    max-width: 46rem;
+    margin-top: 2.5rem;
+    font-size: clamp(1.1rem, 1rem + 0.5vw, 1.3rem);
+    line-height: 1.7;
+}
+
+.contact__links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(13rem, 100%), 1fr));
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.contact__link {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    height: 100%;                     /* todas las tarjetas igual de altas */
+    padding: 1.5rem 1.75rem;
+    border-radius: 1.25rem;
+    background-color: #dcdcdc;
+    color: #111;
+    transition: transform 0.2s;
+}
+
+.contact__link:hover {
+    transform: translateY(-3px);
+}
+
+.contact__link:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 3px;
+}
+
+.contact__link-label {
+    color: #555;
+}
+
+.contact__link-value {
+    font-size: 1.15rem;
+    font-weight: 700;
+    overflow-wrap: anywhere;          /* un email largo parte línea en vez de salirse */
+}
+
+/* Message (formulario) */
+.message {
+    margin-top: 1.25rem;
+}
+
+.message__title {
+    margin-bottom: 2rem;
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.message__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* nombre | email */
+    gap: 1.25rem;
+}
+
+.message__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.message__field--full,
+.message__submit {
+    grid-column: 1 / -1;              /* ocupa las dos columnas */
+}
+
+.message__label {
+    font-weight: 500;
+    color: var(--color-muted);
+}
+
+.message__input {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    border: 1px solid rgb(255 255 255 / 0.12);
+    border-radius: 1rem;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: border-color 0.2s;
+}
+
+.message__input::placeholder {
+    color: var(--color-subtle);
+}
+
+.message__input:hover {
+    border-color: rgb(255 255 255 / 0.25);
+}
+
+.message__input:focus-visible {
+    outline: 2px solid var(--color-text);
+    outline-offset: 2px;
+}
+
+textarea.message__input {
+    resize: vertical;                 /* solo se puede agrandar hacia abajo */
+}
+
+.message__submit {
+    justify-self: start;              /* el botón no se estira a todo el ancho */
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .message__form {
+        grid-template-columns: 1fr;
+    }
+}

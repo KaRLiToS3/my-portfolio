@@ -1,0 +1,32 @@
+/* Degrees */
+.degrees {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));   /* min() evita que se salga en pantallas estrechas */
+    gap: 1.25rem;
+}
+
+.degree {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: clamp(1.75rem, 4vw, 3rem);
+}
+
+.degree__period {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--color-subtle);
+}
+
+.degree__title {
+    font-size: clamp(1.75rem, 1.25rem + 1.5vw, 2.25rem);
+}
+
+.degree__place,
+.degree__description {
+    font-size: 1.1rem;
+}
+
+.degree__tags {
+    margin-top: 0.5rem;
+}
