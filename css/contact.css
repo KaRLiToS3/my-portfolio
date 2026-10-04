@@ -34,23 +34,25 @@
     gap: 0.25rem;
     height: 100%;                     /* todas las tarjetas igual de altas */
     padding: 1.5rem 1.75rem;
+    border: 1px solid transparent;    /* reserva el hueco del borde que aparece en hover */
     border-radius: 1.25rem;
-    background-color: #dcdcdc;
-    color: #111;
-    transition: transform 0.2s;
+    background-color: var(--color-accent-soft);
+    color: var(--color-text);
+    transition: transform 0.2s, border-color 0.2s;
 }
 
 .contact__link:hover {
     transform: translateY(-3px);
+    border-color: var(--color-accent);
 }
 
 .contact__link:focus-visible {
-    outline: 2px solid var(--color-text);
+    outline: 2px solid var(--color-accent);
     outline-offset: 3px;
 }
 
 .contact__link-label {
-    color: #555;
+    color: var(--color-accent-strong);
 }
 
 .contact__link-value {
@@ -97,7 +99,7 @@
 .message__input {
     width: 100%;
     padding: 0.875rem 1.25rem;
-    border: 1px solid rgb(255 255 255 / 0.12);
+    border: 1px solid var(--color-border-strong);
     border-radius: 1rem;
     background-color: var(--color-bg);
     color: var(--color-text);
@@ -109,11 +111,11 @@
 }
 
 .message__input:hover {
-    border-color: rgb(255 255 255 / 0.25);
+    border-color: var(--color-accent);
 }
 
 .message__input:focus-visible {
-    outline: 2px solid var(--color-text);
+    outline: 2px solid var(--color-accent);
     outline-offset: 2px;
 }
 
@@ -159,7 +161,7 @@ select.message__input {
     flex-shrink: 0;                   /* la casilla no se aplasta si el texto ocupa dos líneas */
     width: 1.15rem;
     height: 1.15rem;
-    accent-color: var(--color-text);  /* colorea la marca con el gris claro del tema */
+    accent-color: var(--color-accent);   /* colorea la marca con el azul del tema */
     cursor: pointer;
 }
 

@@ -15,7 +15,7 @@
 .degree__period {
     font-family: var(--font-mono);
     font-size: 0.9rem;
-    color: var(--color-subtle);
+    color: var(--color-signal-text);
 }
 
 .degree__title {

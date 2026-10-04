@@ -1,11 +1,25 @@
 :root {
-    --color-bg: #0a0a0a;
-    --color-surface: #161718;
-    --color-border: rgb(255 255 255 / 0.08);
-    --color-text: #ededed;
-    --color-muted: rgb(237 237 237 / 0.6);
-    --color-subtle: rgb(237 237 237 / 0.45);
-    --color-header-bg: rgb(10 10 10 / 0.8);
+    color-scheme: light;              /* scrollbars y controles de formulario en versión clara */
+
+    --color-bg: #f8f7f4;              /* blanco roto, más cálido que #fff */
+    --color-surface: #ffffff;
+    --color-border: rgb(27 31 59 / 0.1);
+    --color-border-strong: rgb(27 31 59 / 0.2);
+    --color-text: #1b1f3b;            /* azul tinta casi negro */
+    --color-muted: #4a4f6a;
+    --color-subtle: #62677f;
+    --color-header-bg: rgb(248 247 244 / 0.8);
+    --color-grid: rgb(47 74 224 / 0.06);
+
+    --color-accent: #2f4ae0;          /* azul cobalto: enlaces, botones, menú */
+    --color-accent-strong: #2236b5;
+    --color-accent-soft: #e8ecfd;
+    --color-on-accent: #ffffff;       /* texto encima del azul */
+    --color-signal: #f26b38;          /* naranja: solo detalles decorativos */
+    --color-signal-text: #c2470f;     /* naranja más oscuro para que se lea como texto */
+    --color-signal-soft: #fff0e8;
+
+    --shadow: 0 1px 2px rgb(27 31 59 / 0.04), 0 8px 24px rgb(27 31 59 / 0.06);
 
     --font-sans: "DM Sans", system-ui, sans-serif;
     --font-serif: "Instrument Serif", serif;
@@ -30,9 +44,18 @@ button { cursor: pointer; }
 
 body {
     font-family: var(--font-sans);
-    background: var(--color-bg);
+    background-color: var(--color-bg);
+    background-image:                 /* cuadrícula de plano: una línea horizontal y otra vertical cada 2rem */
+        linear-gradient(var(--color-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
+    background-size: 2rem 2rem;
     color: var(--color-text);
     line-height: 1.6;
+}
+
+::selection {
+    background-color: var(--color-accent-soft);
+    color: var(--color-accent-strong);
 }
 
 main {
@@ -64,6 +87,7 @@ p {
     position: sticky;
     top: 0;
     z-index: 10;                      /* por encima de las imágenes posicionadas de las cards */
+    border-bottom: 1px solid var(--color-border);
     background: var(--color-header-bg);
     backdrop-filter: blur(10px);
 }
@@ -82,8 +106,8 @@ p {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background: linear-gradient(145deg, #e8e8e8, #9a9a9a);
-    color: #222;
+    background: linear-gradient(145deg, #5b74ff, var(--color-accent-strong));
+    color: var(--color-on-accent);
     font-family: var(--font-serif);
     font-size: 1.5rem;
     font-weight: 400;
@@ -104,12 +128,13 @@ p {
 }
 
 .nav__link:hover {
-    color: var(--color-text);
+    background-color: var(--color-accent-soft);
+    color: var(--color-accent-strong);
 }
 
 .nav__link.is-active {
-    background: #dcdcdc;
-    color: #111;
+    background: var(--color-accent);
+    color: var(--color-on-accent);
 }
 
 /* Footer */
@@ -127,6 +152,7 @@ p {
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius);
+    box-shadow: var(--shadow);        /* en fondo claro la sombra separa la card del fondo */
 }
 
 /* Buttons */
@@ -141,27 +167,28 @@ p {
 }
 
 .btn:focus-visible {
-    outline: 2px solid var(--color-text);
+    outline: 2px solid var(--color-accent);
     outline-offset: 3px;
 }
 
 .btn--solid {
-    background-color: var(--color-text);
-    color: var(--color-bg);
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
 }
 
 .btn--solid:hover {
-    background-color: #ffffff;
+    background-color: var(--color-accent-strong);
 }
 
 .btn--outline {
-    border-color: rgb(255 255 255 / 0.2);
+    border-color: var(--color-border-strong);
+    background-color: var(--color-surface);
     color: var(--color-text);
 }
 
 .btn--outline:hover {
-    border-color: rgb(255 255 255 / 0.45);
-    background-color: rgb(255 255 255 / 0.06);
+    border-color: var(--color-accent);
+    color: var(--color-accent-strong);
 }
 
 @media (max-width: 768px) {
@@ -176,6 +203,11 @@ p {
     font-size: clamp(2.75rem, 2rem + 3vw, 4.5rem);
 }
 
+.page-title::after {
+    content: ".";                     /* punto final decorativo en naranja: «Projects.» */
+    color: var(--color-signal);
+}
+
 /* Tags */
 .tag-list {
     display: flex;
@@ -186,8 +218,8 @@ p {
 .tag {
     padding: 0.375rem 1.125rem;
     border-radius: 999px;
-    background-color: #dcdcdc;        /* mismo gris que el enlace activo del menú */
-    color: #111;
+    background-color: var(--color-accent-soft);   /* versión suave del azul del menú */
+    color: var(--color-accent-strong);
     font-size: 0.95rem;
     font-weight: 500;
 }
@@ -209,9 +241,9 @@ p {
 
 .pager__link--next {
     margin-left: auto;                /* se queda a la derecha aunque no haya enlace anterior */
-    color: var(--color-text);
+    color: var(--color-accent);
 }
 
 .pager__link:hover {
-    color: var(--color-text);
+    color: var(--color-accent-strong);
 }
