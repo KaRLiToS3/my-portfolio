@@ -137,9 +137,20 @@ h2 {
     hyphens: auto;
 }
 
+.my-story__figure {
+    margin: 0; /* figure trae margen por defecto */
+    align-self: center;
+}
+
 .my-story__image {
     border-radius: 2rem;
-    align-self: center;
+}
+
+.my-story__caption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    text-align: center;
 }
 
 @media (max-width: 768px) {
