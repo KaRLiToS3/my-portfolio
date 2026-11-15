@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Work experience of Carlos Peña Edo — R&amp;D on space situational awareness at Satlantis and electronics &amp; software at the UDMT racing team.">
+        <meta name="description" content="Experience of Carlos Peña Edo — R&amp;D on space situational awareness at Satlantis and electronics &amp; software at Deusto Moto Team, a student racing team.">
         <meta name="theme-color" content="#f8f7f4">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,7 @@
         </header>
 
         <main>
-            <h1 class="page-title">Work experience</h1>
+            <h1 class="page-title">Experience</h1>
 
             <ol class="jobs">
                 <li class="card job">
@@ -49,7 +49,7 @@
                             <li>Working on an R&amp;D project in Space Situational Awareness (SSA): a system that continuously monitors a region of space to detect objects in orbit passing near our satellite.</li>
                             <li>Designing an optical system that redirects its line of sight towards a detected object with minimal power, instead of pointing the camera in advance and hoping the object crosses the field of view.</li>
                             <li>Enabling the system to track objects of interest for several seconds once detected.</li>
-                            <li>Building a compact prototype from scratch, designed to be attached to other payloads as a secondary payload.</li>
+                            <li>Building a compact prototype from scratch: a test bench to validate the tracking within the dimensions of a secondary payload. It is not tested attached to another payload.</li>
                             <li>Developing the software architecture for detection, pointing and tracking.</li>
                         </ul>
                         <ul class="tag-list job__tags" aria-label="Technologies">
@@ -68,23 +68,24 @@
 
                     <div class="job__body">
                         <p class="job__period">2023 — Now</p>
-                        <h2 class="job__title">General Manager · Electronics &amp; Software Engineer</h2>
-                        <p class="job__place">University of Deusto Moto Team (UDMT) · Bilbao</p>
+                        <h2 class="job__title">General Coordinator · Electronics &amp; Software Engineer</h2>
+                        <p class="job__place">Deusto Moto Team · Student team, University of Deusto · Bilbao</p>
                         <ul class="job__tasks">
-                            <li>Lead the electronics &amp; software area of a team that designs and builds an electric racing motorbike for the international MotoStudent competition, under strict technical rules and tight deadlines.</li>
-                            <li>Built the telemetry system: ESP32 nodes read the CAN bus and send the data over MQTT to InfluxDB, with live dashboards in Grafana.</li>
-                            <li>Worked on the battery system and designed the rider's display.</li>
-                            <li>Designing the central PCB in KiCad, where an ESP32 connects sensors and controllers and manages the states of the bike.</li>
-                            <li>As General Manager, coordinate the work between the different areas of the team.</li>
+                            <li>Lead the electronics &amp; software area (14 people) of a 32-person student team that designs and builds an electric racing motorbike for the international MotoStudent competition, under strict technical rules and tight deadlines.</li>
+                            <li>Ran the first telemetry test: read the ECU's CAN frames with PCAN-View and sent test messages from an ESP32 over MQTT (Mosquitto) to InfluxDB, all running in Docker.</li>
+                            <li>Defined the battery requirements with the team (a 29S16P pack, from the calculated range and the motor voltage); an external company designed and manufactured it.</li>
+                            <li>Designed the whole electrical system of the bike (start-up and charging sequences, emergency stop) and its central PCB in KiCad: a 4-layer board where an ESP32-S3 connects sensors and controllers and manages the states of the bike. The first version is manufactured and the second is in design.</li>
+                            <li>As General Coordinator, coordinate the work between the different areas of the team.</li>
                         </ul>
                         <ul class="tag-list job__tags" aria-label="Technologies">
+                            <li class="tag">KiCad</li>
+                            <li class="tag">ESP32-S3</li>
                             <li class="tag">C/C++</li>
-                            <li class="tag">ESP32</li>
                             <li class="tag">CAN</li>
+                            <li class="tag">PCAN-View</li>
                             <li class="tag">MQTT</li>
                             <li class="tag">InfluxDB</li>
-                            <li class="tag">Grafana</li>
-                            <li class="tag">KiCad</li>
+                            <li class="tag">Docker</li>
                         </ul>
                     </div>
                 </li>

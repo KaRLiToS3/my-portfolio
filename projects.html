@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Projects by Carlos Peña Edo — embedded systems, IoT and software.">
+        <meta name="description" content="Projects by Carlos Peña Edo — electronics, PCB design, embedded systems, automation and software.">
         <meta name="theme-color" content="#f8f7f4">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,14 +83,15 @@
                 </li>
 
                 <li class="card project">
-                    <div class="project__media"><video src="video/udmt_motorspin_web.mp4" autoplay muted loop playsinline aria-label="Electric motor of the UDMT motorbike spinning on a test bench, wired to its motor controller"></video></div>
+                    <div class="project__media"><video src="video/udmt_motorspin_web.mp4" autoplay muted loop playsinline aria-label="Electric motor of the Deusto Moto Team motorbike spinning on a test bench, wired to its motor controller"></video></div>
                     <div class="project__body">
-                        <p class="project__category">Electric powertrain · UDMT</p>
+                        <p class="project__category">Electric powertrain · Deusto Moto Team</p>
                         <h2 class="project__title">Motor spin test</h2>
-                        <p class="project__description">Bench test of the electric powertrain for UDMT's racing motorbike: the motor spinning, driven by its motor controller, with the high-voltage cabling and the control electronics wired up on the test bench. It is the step that proves the whole chain works before the motor goes into the bike.</p>
+                        <p class="project__description">Bench test of the electric powertrain for Deusto Moto Team's racing motorbike, on a test bench I designed and assembled myself: the motor spinning, driven by its motor controller and powered by the 24S12P test battery, with the high-voltage cabling and the control electronics wired up. It is the step that proves the whole chain works before the motor goes into the bike.</p>
                         <ul class="project__stack" aria-label="Tech stack">
                             <li>Electric motor</li>
                             <li>Motor controller</li>
+                            <li>24S12P battery</li>
                             <li>Wiring</li>
                             <li>Testing</li>
                         </ul>
@@ -114,17 +115,86 @@
                 </li>
 
                 <li class="card project">
-                    <div class="project__media"><video src="video/siemens_web.mp4" autoplay muted loop playsinline aria-label="PLC program controlling a simulated tank and conveyor line, sped up"></video></div>
+                    <div class="project__media"><img src="img/tank_level_control.jpg" alt="Lab rig with a water tank, a pump and a valve, powered by two bench power supplies"></div>
                     <div class="project__body">
-                        <p class="project__category">Industrial automation</p>
-                        <h2 class="project__title">Siemens PLC programming</h2>
-                        <p class="project__description">Automation programs for Siemens PLCs in TIA Portal, using structured text (SCL), ladder (LAD) and function block diagrams (FBD), plus pneumatic circuits in FluidSIM.</p>
+                        <p class="project__category">Industrial automation · Team of 3</p>
+                        <h2 class="project__title">PI level control of a water tank</h2>
+                        <p class="project__description">Project for Advanced Industrial Automation, in a team of three: a Siemens S7-1500 PLC programmed in TIA Portal keeps the water level of a tank at its setpoint with the PID_Compact block, set up as a PI controller and tuned with its auto-tuning. It holds the level through setpoint changes and disturbances, such as opening the outlet valve. We did every part together, with equal contributions.</p>
                         <ul class="project__stack" aria-label="Tech stack">
+                            <li>S7-1500</li>
                             <li>TIA Portal</li>
-                            <li>SCL</li>
-                            <li>LAD</li>
-                            <li>FBD</li>
-                            <li>FluidSIM</li>
+                            <li>PID_Compact</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="card project">
+                    <div class="project__media"><video src="video/ur3e_web.mp4" autoplay muted loop playsinline aria-label="UR3e robot arm picking up green cubes and placing them together on a table"></video></div>
+                    <div class="project__body">
+                        <p class="project__category">Robotics · Team of 3</p>
+                        <h2 class="project__title">UR3e cube stacking</h2>
+                        <p class="project__description">Project for Advanced Industrial Automation, in a team of three: a UR3e robot arm that stacks cubes, programmed first from the robot's own console and then in Python over RTDE. My part: the reusable motion functions and the change of base.</p>
+                        <ul class="project__stack" aria-label="Tech stack">
+                            <li>UR3e</li>
+                            <li>Python</li>
+                            <li>RTDE</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="card project">
+                    <div class="project__media"><img src="img/pulse_amplifier.jpg" alt="Oscilloscope capture of the amplified pulse signal above the breadboard circuit with the infrared sensor and the op-amp"></div>
+                    <div class="project__body">
+                        <p class="project__category">Analog electronics · Solo</p>
+                        <h2 class="project__title">Heart-pulse amplifier</h2>
+                        <p class="project__description">Project for Electronic Technology, which I built on my own in December 2025: a TCRT5000 infrared sensor picks up the pulse from a fingertip, a high-pass filter removes the DC component, an LM358 amplifies it with a gain of 1000 and a low-pass filter cleans up the noise. The signal goes from millivolts to volts, checked on an oscilloscope and with an Arduino as a low-cost scope.</p>
+                        <ul class="project__stack" aria-label="Tech stack">
+                            <li>Op-amp</li>
+                            <li>Filters</li>
+                            <li>Oscilloscope</li>
+                            <li>Arduino</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="card project">
+                    <div class="project__media"><img src="img/load_cell.jpg" alt="Round scale with a load cell wired to a breadboard with the amplifier stages and oscilloscope probes"></div>
+                    <div class="project__body">
+                        <p class="project__category">Instrumentation · Team of 2</p>
+                        <h2 class="project__title">Signal conditioning for a scale</h2>
+                        <p class="project__description">Project for Electronic Instrumentation, done in a pair: a bridge with a load cell followed by four amplification stages, simulated in PSpice and characterised in the lab. My part: the hardware design.</p>
+                        <ul class="project__stack" aria-label="Tech stack">
+                            <li>Instrumentation</li>
+                            <li>PSpice</li>
+                            <li>LM324</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="card project">
+                    <div class="project__media"><img src="img/basys3.jpg" alt="Digilent Basys 3 FPGA board"></div>
+                    <div class="project__body">
+                        <p class="project__category">Digital design · Team of 3</p>
+                        <h2 class="project__title">FPGA-controlled vehicle</h2>
+                        <p class="project__description">Project for Programmable Logic, in a team of three, graded 10 out of 10: a vehicle controlled by a Basys 3 FPGA. My part was the steering: a potentiometer read through the XADC, a filter and the PWM signal for the servo. The group added the ultrasonic sensors and the automatic braking.</p>
+                        <ul class="project__stack" aria-label="Tech stack">
+                            <li>VHDL</li>
+                            <li>Basys 3</li>
+                            <li>XADC</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="card project">
+                    <div class="project__media"><video src="video/stm32_rfid_web.mp4" autoplay muted loop playsinline aria-label="RFID tags held up to a reader wired to a microcontroller board, with an LCD showing the result"></video></div>
+                    <div class="project__body">
+                        <p class="project__category">Embedded · Team of 3</p>
+                        <h2 class="project__title">Access control with STM32 and RFID</h2>
+                        <p class="project__description">Project for Microprocessors, in a team of three: an access control system on an STM32, with a barrier moved by a servo and an LCD screen. My part was the RFID reader, porting a C++ library to C.</p>
+                        <ul class="project__stack" aria-label="Tech stack">
+                            <li>STM32</li>
+                            <li>C</li>
+                            <li>RFID</li>
                         </ul>
                     </div>
                 </li>
@@ -134,10 +204,11 @@
                     <div class="project__body">
                         <p class="project__category">Hardware · PCB</p>
                         <h2 class="project__title">Motorbike control board</h2>
-                        <p class="project__description">UDMT's central PCB, designed in KiCad. An ESP32 connects the sensors and controllers and manages the different states of the bike. Work in progress.</p>
+                        <p class="project__description">Deusto Moto Team's central PCB, designed in KiCad: a 4-layer board built around an ESP32-S3 that manages the states of the bike. It includes the shutdown chain and reads GPS, IMU, Hall-effect and temperature sensors. The first version is manufactured; the second is in design.</p>
                         <ul class="project__stack" aria-label="Tech stack">
                             <li>KiCad</li>
-                            <li>ESP32</li>
+                            <li>ESP32-S3</li>
+                            <li>4-layer PCB</li>
                             <li>C/C++</li>
                         </ul>
                     </div>
@@ -148,12 +219,12 @@
                     <div class="project__body">
                         <p class="project__category">Tooling · Python</p>
                         <h2 class="project__title">kicadcomponent</h2>
-                        <p class="project__description">Command-line tool that adds and removes LCSC/EasyEDA components in a KiCad project, keeping symbol, footprint and 3D model in sync. Published on PyPI, with tests and CI.</p>
+                        <p class="project__description">Command-line tool that adds and removes LCSC/EasyEDA components in a KiCad project, keeping symbol, footprint and 3D model in sync. I wrote the functional specification and published it on PyPI; the code was written by an AI.</p>
                         <ul class="project__stack" aria-label="Tech stack">
                             <li>Python</li>
                             <li>KiCad</li>
-                            <li>GitHub Actions</li>
                             <li>PyPI</li>
+                            <li>AI-written code</li>
                         </ul>
                         <a class="project__link" href="https://github.com/KaRLiToS3/kicadcomponent" target="_blank" rel="noopener">GitHub <span aria-hidden="true">→</span></a>
                     </div>
@@ -203,19 +274,20 @@
                 </li>
 
                 <li class="card project">
-                    <!-- Cuando tengas la foto, cambia el texto por <img src="img/..." alt="..."> -->
-                    <div class="project__media">Grafana dashboard</div>
+                    <!-- Cuando tengas una captura tuya (p. ej. de PCAN-View), cambia el texto por <img src="img/..." alt="..."> -->
+                    <div class="project__media">CAN · MQTT · InfluxDB</div>
                     <div class="project__body">
                         <p class="project__category">Embedded · IoT</p>
-                        <h2 class="project__title">MotoStudent telemetry</h2>
-                        <p class="project__description">Real-time telemetry for UDMT's electric racing motorbike. ESP32 nodes read the CAN bus and publish over MQTT to InfluxDB, and Grafana dashboards show the data live.</p>
+                        <h2 class="project__title">MotoStudent telemetry test</h2>
+                        <p class="project__description">First test of the telemetry for Deusto Moto Team's electric racing motorbike: I read the ECU's CAN frames with PCAN-View and sent test messages from an ESP32 over MQTT (Mosquitto) to InfluxDB, all running in Docker. It stayed at this first test; the dashboards were never built.</p>
                         <ul class="project__stack" aria-label="Tech stack">
                             <li>ESP32</li>
                             <li>C/C++</li>
                             <li>CAN</li>
+                            <li>PCAN-View</li>
                             <li>MQTT</li>
                             <li>InfluxDB</li>
-                            <li>Grafana</li>
+                            <li>Docker</li>
                         </ul>
                         <a class="project__link" href="https://www.instagram.com/udeustomototeam/" target="_blank" rel="noopener">The team on Instagram <span aria-hidden="true">→</span></a>
                     </div>
@@ -224,11 +296,10 @@
                 <li class="card project">
                     <div class="project__media">QEMU boot screen</div>
                     <div class="project__body">
-                        <p class="project__category">Low level · OS</p>
+                        <p class="project__category">Low level · Exploration</p>
                         <h2 class="project__title">Hello World kernel</h2>
-                        <p class="project__description">A bootloader in assembly and a minimal x86 kernel in C, booted with GRUB in QEMU, to understand what happens between the power button and the first line on screen.</p>
+                        <p class="project__description">An exploration, not a finished project: a minimal x86 kernel in C, booted with GRUB in QEMU, to understand what happens between the power button and the first line on screen.</p>
                         <ul class="project__stack" aria-label="Tech stack">
-                            <li>Assembly</li>
                             <li>C</li>
                             <li>GRUB</li>
                             <li>QEMU</li>
@@ -240,9 +311,9 @@
                 <li class="card project">
                     <div class="project__media">photo of the car</div>
                     <div class="project__body">
-                        <p class="project__category">Robotics · Mobile</p>
+                        <p class="project__category">Robotics · Mobile · Since 2024</p>
                         <h2 class="project__title">Bluetooth RC car</h2>
-                        <p class="project__description">Car built around an Arduino Nano with a Bluetooth module, motor controller and servo, driven from an Android app I made with Android Studio. Part of my robotics projects, together with a robotic arm and a drone.</p>
+                        <p class="project__description">Started in 2024 and still far from finished: a car built around an Arduino Nano with a Bluetooth module, motor controller and servo, meant to be driven from an Android app made with Android Studio. Part of my robotics projects, together with a robotic arm and a drone.</p>
                         <ul class="project__stack" aria-label="Tech stack">
                             <li>Arduino</li>
                             <li>C++</li>
